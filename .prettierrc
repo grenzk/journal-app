@@ -1,3 +1,5 @@
 {
-  "rubyPlugins": "plugin/single_quotes"
+  "rubyPlugins": "plugin/single_quotes",
+  "singleQuote": true,
+  "semi": false
 }
