@@ -10,6 +10,9 @@
 # Ignore vscode config.
 /.vscode
 
+# Ignore dump.rdb
+/dump.rdb
+
 # Ignore node modules directory.
 node_modules
 
