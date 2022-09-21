@@ -72,3 +72,5 @@ group :test do
 end
 
 gem "hotwire-livereload", "~> 1.2"
+
+gem "cssbundling-rails", "~> 1.1"
