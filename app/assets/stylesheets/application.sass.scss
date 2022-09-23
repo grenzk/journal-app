@@ -1,1 +1,14 @@
-// Entry point for your Sass build
+// Configuration
+@use 'config/variables';
+@use 'config/reset';
+
+// Components
+@use 'components/btn';
+@use 'components/error_message';
+@use 'components/form';
+@use 'components/visually_hidden';
+@use 'components/category';
+
+// Layouts
+@use 'layouts/container';
+@use 'layouts/header';
