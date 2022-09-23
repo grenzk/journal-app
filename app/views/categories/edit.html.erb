@@ -1,0 +1,9 @@
+<main class="container">
+  <%= link_to sanitize('&larr; Back to category'), category_path(@category) %>
+
+  <div class="header">
+    <h1>Edit category</h1>
+  </div>
+
+  <%= render 'form', category: @category %>
+</main>

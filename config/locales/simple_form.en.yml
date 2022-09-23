@@ -1,0 +1,14 @@
+en:
+  simple_form:
+    placeholders:
+      category:
+        name: Name of your category
+    labels:
+      category:
+        name: Name
+
+  helpers:
+    submit:
+      category:
+        create: Create category
+        update: Update category
