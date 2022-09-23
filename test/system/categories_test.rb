@@ -8,9 +8,9 @@ class CategoriesTest < ApplicationSystemTestCase
     assert_selector 'h1', text: 'Categories'
 
     click_on 'New category'
-    assert_selector 'h1', text: 'New category'
-
     fill_in 'Name', with: 'Personal'
+
+    assert_selector 'h1', text: 'Categories'
     click_on 'Create category'
 
     assert_selector 'h1', text: 'Categories'
@@ -29,9 +29,9 @@ class CategoriesTest < ApplicationSystemTestCase
     assert_selector 'h1', text: 'Categories'
 
     click_on 'Edit', match: :first
-    assert_selector 'h1', text: 'Edit category'
-
     fill_in 'Name', with: 'Updated category'
+
+    assert_selector 'h1', text: 'Category'
     click_on 'Update category'
 
     assert_selector 'h1', text: 'Categories'
