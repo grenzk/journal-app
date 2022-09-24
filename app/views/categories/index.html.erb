@@ -1,3 +1,5 @@
+<%= turbo_stream_from 'categories' %>
+
 <main class="container">
   <div class="header">
     <h1>Categories</h1>
@@ -12,7 +14,7 @@
   </div>
 
   <%= turbo_frame_tag Category.new %>
-  
+
   <%= turbo_frame_tag 'categories' do %>
     <%= render @categories %>
   <% end %>
