@@ -1,6 +1,11 @@
 first:
+  admin: admin1
   name: First category
+
 second:
+  admin: admin1
   name: Second category
+
 third:
+  admin: admin1
   name: Third category

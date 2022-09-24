@@ -1,4 +1,5 @@
 class Category < ApplicationRecord
+  belongs_to :admin
   validates :name, presence: true
 
   scope :ordered, -> { order(id: :desc) }
