@@ -6,15 +6,15 @@
 #
 user1:
   admin: admin1
-  email: user1@email.com
+  email: john@email.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
 
 user2:
   admin: admin1
-  email: user2@email.com
+  email: steve@email.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
 
 user3:
   admin: admin2
-  email: user3@email.com
+  email: james@email.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
