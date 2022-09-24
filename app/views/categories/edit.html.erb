@@ -4,6 +4,7 @@
   <div class="header">
     <h1>Edit category</h1>
   </div>
-
-  <%= render 'form', category: @category %>
+  <%= turbo_frame_tag @category do %>
+    <%= render 'form', category: @category %>
+  <% end %>
 </main>

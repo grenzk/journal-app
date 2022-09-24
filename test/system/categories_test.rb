@@ -1,7 +1,7 @@
 require 'application_system_test_case'
 
 class CategoriesTest < ApplicationSystemTestCase
-  setup { @category = categories(:first) }
+  setup { @category = Category.ordered.first }
 
   test 'Creating a new category' do
     visit categories_path
@@ -31,7 +31,7 @@ class CategoriesTest < ApplicationSystemTestCase
     click_on 'Edit', match: :first
     fill_in 'Name', with: 'Updated category'
 
-    assert_selector 'h1', text: 'Category'
+    assert_selector 'h1', text: 'Categories'
     click_on 'Update category'
 
     assert_selector 'h1', text: 'Categories'

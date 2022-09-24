@@ -4,6 +4,8 @@
   <div class="header">
     <h1>New category</h1>
   </div>
-
-  <%= render 'form', category: @category %>
+  
+  <%= turbo_frame_tag @category do %>
+    <%= render 'form', category: @category %>
+  <% end %>
 </main>

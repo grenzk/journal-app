@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   before_action :set_category, only: %i[show edit update destroy]
 
   def index
-    @categories = Category.all
+    @categories = Category.ordered
   end
 
   def show
@@ -16,7 +16,13 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
 
     if @category.save
-      redirect_to categories_path, notice: 'Category was successfully created.'
+      respond_to do |format|
+        format.html do
+          redirect_to categories_path,
+                      notice: 'Category was successfully created.'
+        end
+        format.turbo_stream
+      end
     else
       render :new, status: :unprocessable_entity
     end
@@ -35,7 +41,14 @@ class CategoriesController < ApplicationController
 
   def destroy
     @category.destroy
-    redirect_to categories_path, notice: 'Category was successfully deleted.'
+
+    respond_to do |format|
+      format.html do
+        redirect_to categories_path,
+                    notice: 'Category was successfully deleted.'
+      end
+      format.turbo_stream
+    end
   end
 
   private

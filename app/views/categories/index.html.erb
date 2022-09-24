@@ -1,8 +1,19 @@
 <main class="container">
   <div class="header">
     <h1>Categories</h1>
-    <%= link_to 'New category', new_category_path, class: 'btn btn--primary' %>
+    <%=
+      link_to 'New category',
+        new_category_path,
+        class: 'btn btn--primary',
+        data: {
+          turbo_frame: dom_id(Category.new)
+        }
+    %>
   </div>
 
-  <%= render @categories %>
+  <%= turbo_frame_tag Category.new %>
+  
+  <%= turbo_frame_tag 'categories' do %>
+    <%= render @categories %>
+  <% end %>
 </main>
