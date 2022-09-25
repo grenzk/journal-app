@@ -1,6 +1,7 @@
 // Configuration
 @use 'config/variables';
 @use 'config/reset';
+@use 'config/animations';
 
 // Components
 @use 'components/btn';
@@ -10,6 +11,7 @@
 @use 'components/category';
 @use 'components/turbo_progress_bar';
 @use 'components/navbar';
+@use 'components/flash';
 
 // Layouts
 @use 'layouts/container';
