@@ -21,7 +21,9 @@ class CategoriesController < ApplicationController
           redirect_to categories_path,
                       notice: 'Category was successfully created.'
         end
-        format.turbo_stream
+        format.turbo_stream do
+          flash.now[:notice] = 'Category was successfully created.'
+        end
       end
     else
       render :new, status: :unprocessable_entity
@@ -33,7 +35,15 @@ class CategoriesController < ApplicationController
 
   def update
     if @category.update(category_params)
-      redirect_to categories_path, notice: 'Category was successfully updated.'
+      respond_to do |format|
+        format.html do
+          redirect_to categories_path,
+                      notice: 'Category was successfully updated.'
+        end
+        format.turbo_stream do
+          flash.now[:notice] = 'Category was successfully updated.'
+        end
+      end
     else
       render :edit, status: :unprocessable_entity
     end
@@ -47,7 +57,9 @@ class CategoriesController < ApplicationController
         redirect_to categories_path,
                     notice: 'Category was successfully deleted.'
       end
-      format.turbo_stream
+      format.turbo_stream do
+        flash.now[:notice] = 'Category was successfully deleted.'
+      end
     end
   end
 
