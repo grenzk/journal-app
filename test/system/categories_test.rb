@@ -1,7 +1,10 @@
 require 'application_system_test_case'
 
 class CategoriesTest < ApplicationSystemTestCase
-  setup { @category = Category.ordered.first }
+  setup do
+    login_as users(:user1)
+    @category = Category.ordered.first
+  end
 
   test 'Creating a new category' do
     visit categories_path
