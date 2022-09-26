@@ -1,11 +1,10 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+task_today:
+  line_item_date: today
+  name: Plan my project
+  description: A simple todo list project.
 
-one:
-  line_item_date: one
-  name: MyString
-  description: MyText
-
-two:
-  line_item_date: two
-  name: MyString
-  description: MyText
+task_next_week:
+  line_item_date: next_week
+  name: Prepare and cook meals for my guest.
+  description: Pasta. Chicken. Beef.
