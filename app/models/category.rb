@@ -1,5 +1,6 @@
 class Category < ApplicationRecord
   belongs_to :admin
+  has_many :line_item_dates, dependent: :destroy
   validates :name, presence: true
 
   scope :ordered, -> { order(id: :desc) }
