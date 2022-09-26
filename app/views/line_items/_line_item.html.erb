@@ -10,11 +10,19 @@
       button_to 'Delete',
           [category, line_item_date, line_item],
           method: :delete,
+          form: {
+            data: {
+              turbo_frame: '_top'
+            }
+          },
           class: 'btn btn--light'
     %>
     <%=
       link_to 'Edit',
         [:edit, category, line_item_date, line_item],
+        data: {
+          turbo_frame: '_top'
+        },
         class: 'btn btn--light'
     %>
   </div>
