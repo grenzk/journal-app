@@ -10,8 +10,15 @@ class LineItemDatesController < ApplicationController
     @line_item_date = @category.line_item_dates.build(line_item_date_params)
 
     if @line_item_date.save
-      redirect_to category_path(@category),
-                  notice: 'Date was successfully created.'
+      respond_to do |format|
+        format.html do
+          redirect_to category_path(@category),
+                      notice: 'Date was successfully created.'
+        end
+        format.turbo_stream do
+          flash.now[:notice] = 'Date was successfully created.'
+        end
+      end
     else
       render :new, status: :unprocessable_entity
     end
