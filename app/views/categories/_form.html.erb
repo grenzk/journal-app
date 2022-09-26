@@ -1,7 +1,7 @@
 <%= simple_form_for category, html: { class: 'category form'} do |f| %>
   <% if category.errors.any? %>
     <div class="error-message">
-      <%= category.errors.full_messages.to_sentence.capitalize %>
+      <%= form_error_notification(category) %>
     </div>
   <% end %>
 

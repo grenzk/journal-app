@@ -19,7 +19,7 @@ class LineItemDatesController < ApplicationController
   private
 
   def line_item_date_params
-    parans.require(:line_item_date).permit(:date)
+    params.require(:line_item_date).permit(:date)
   end
 
   def set_category
