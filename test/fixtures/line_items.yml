@@ -6,5 +6,5 @@ task_today:
 
 task_next_week:
   line_item_date: next_week
-  name: Prepare and cook meals for my guest.
+  name: Prepare and cook meals for my guests
   description: Pasta. Chicken. Beef.

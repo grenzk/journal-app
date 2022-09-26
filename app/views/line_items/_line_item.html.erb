@@ -1,0 +1,21 @@
+<div class="line-item">
+  <div class="line-item__name">
+    <%= line_item.name %>
+    <div class="line-item__description">
+      <%= simple_format line_item.description %>
+    </div>
+  </div>
+  <div class="line-item__actions">
+    <%=
+      button_to 'Delete',
+          [category, line_item_date, line_item],
+          method: :delete,
+          class: 'btn btn--light'
+    %>
+    <%=
+      link_to 'Edit',
+        [:edit, category, line_item_date, line_item],
+        class: 'btn btn--light'
+    %>
+  </div>
+</div>
