@@ -1,4 +1,5 @@
 <%= turbo_stream.prepend 'categories', @category %>
 
 <%= turbo_stream.update Category.new, '' %>
-<%= turbo_stream.prepend 'flash', partial: 'layouts/flash' %>
+
+<%= render_turbo_stream_flash_messages %>
