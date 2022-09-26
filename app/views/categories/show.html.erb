@@ -4,5 +4,13 @@
     <h1>
       <%= @category.name %>
     </h1>
+
+    <%=
+      link_to 'New date',
+        new_category_line_item_date_path(@category),
+        class: 'btn btn--primary'
+    %>
   </div>
+
+  <%= render @line_item_dates, category: @category %>
 </main>

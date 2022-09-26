@@ -6,6 +6,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    @line_item_dates = @category.line_item_dates.ordered
   end
 
   def new
