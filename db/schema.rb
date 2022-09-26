@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_26_065301) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_26_105206) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -38,6 +38,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_26_065301) do
     t.index ["date"], name: "index_line_item_dates_on_date"
   end
 
+  create_table "line_items", force: :cascade do |t|
+    t.bigint "line_item_date_id", null: false
+    t.string "name", null: false
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["line_item_date_id"], name: "index_line_items_on_line_item_date_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -54,5 +63,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_26_065301) do
 
   add_foreign_key "categories", "admins"
   add_foreign_key "line_item_dates", "categories"
+  add_foreign_key "line_items", "line_item_dates"
   add_foreign_key "users", "admins"
 end
