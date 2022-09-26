@@ -16,6 +16,7 @@
   <%= turbo_frame_tag Category.new %>
 
   <%= turbo_frame_tag 'categories' do %>
+    <%= render 'categories/empty_state' %>
     <%= render @categories %>
   <% end %>
 </main>

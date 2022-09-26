@@ -12,6 +12,7 @@
 @use 'components/turbo_progress_bar';
 @use 'components/navbar';
 @use 'components/flash';
+@use 'components/empty_state';
 
 // Layouts
 @use 'layouts/container';
