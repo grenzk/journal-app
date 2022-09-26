@@ -29,8 +29,15 @@ class LineItemDatesController < ApplicationController
 
   def update
     if @line_item_date.update(line_item_date_params)
-      redirect_to category_path(@category),
-                  notice: 'Date was successfully created'
+      respond_to do |format|
+        format.html do
+          redirect_to category_path(@category),
+                      notice: 'Date was successfully updated.'
+        end
+        format.turbo_stream do
+          flash.now[:notice] = 'Date was successfully updated.'
+        end
+      end
     else
       render :edit, status: :unprocessable_entity
     end
@@ -39,8 +46,15 @@ class LineItemDatesController < ApplicationController
   def destroy
     @line_item_date.destroy
 
-    redirect_to category_path(@category),
-                notice: 'Date was successfully destroyed.'
+    respond_to do |format|
+      format.html do
+        redirect_to category_path(@category),
+                    notice: 'Date was successfully destroyed.'
+      end
+      format.turbo_stream do
+        flash.now[:notice] = 'Date was successfully destroyed.'
+      end
+    end
   end
 
   private
