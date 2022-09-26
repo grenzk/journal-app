@@ -3,8 +3,13 @@ en:
     placeholders:
       category:
         name: Name of your category
+      line_item:
+        name: What's on your mind?
+        description: Description (optional)
     labels:
       category:
+        name: Name
+      line_item:
         name: Name
       line_item_date:
         date: Date
@@ -14,6 +19,9 @@ en:
       category:
         create: Create category
         update: Update category
+      line_item:
+        create: Create task
+        update: Update task
       line_item_date:
         create: Create date
         update: Update date
