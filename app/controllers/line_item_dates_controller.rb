@@ -49,10 +49,10 @@ class LineItemDatesController < ApplicationController
     respond_to do |format|
       format.html do
         redirect_to category_path(@category),
-                    notice: 'Date was successfully destroyed.'
+                    notice: 'Date was successfully deleted.'
       end
       format.turbo_stream do
-        flash.now[:notice] = 'Date was successfully destroyed.'
+        flash.now[:notice] = 'Date was successfully deleted.'
       end
     end
   end
