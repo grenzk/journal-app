@@ -68,4 +68,9 @@
       text-transform: uppercase;
     }
   }
+
+  &--today {
+    flex-direction: column;
+    gap: var(--space-l);
+  }
 }

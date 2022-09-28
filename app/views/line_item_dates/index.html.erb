@@ -1,0 +1,33 @@
+<main class="container">
+  <%= link_to sanitize('&larr; Back to category'), @category %>
+  <div class="header">
+    <h1>Today</h1>
+  </div>
+
+  <% unless @current.nil? %>
+    <div class="line-item-date">
+      <div class="line-item-date__header">
+        <h2 class="line-item-date__title">
+          <%= l(@current.date, format: :long) %>
+        </h2>
+      </div>
+
+      <div class="line-item-date__body">
+        <div class="line-item line-item--header">
+          <div class="line-item__name">Tasks</div>
+        </div>
+
+        <div class="line-item line-item--today">
+          <% @line_item_date.each do |line_item| %>
+            <div class="line-item__name">
+              <%= line_item.name %>
+              <div class="line-item__description">
+                <%= simple_format line_item.description %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</main>

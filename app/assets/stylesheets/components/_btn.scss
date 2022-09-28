@@ -18,6 +18,10 @@
     transition: filter 250ms, color 200ms;
   }
 
+  &--ml {
+    margin-left: var(--space-xxxs);
+  }
+
   &--primary {
     color: var(--color-white);
     background-image: linear-gradient(

@@ -4,19 +4,25 @@
     <h1>
       <%= @category.name %>
     </h1>
-
-    <%=
-      link_to 'New date',
-        new_category_line_item_date_path(@category),
-        data: {
-          turbo_frame: dom_id(LineItemDate.new)
-        },
-        class: 'btn btn--primary'
-    %>
+    <div>
+      <%=
+        link_to 'New date',
+          new_category_line_item_date_path(@category),
+          data: {
+            turbo_frame: dom_id(LineItemDate.new)
+          },
+          class: 'btn btn--primary'
+      %>
+      <%=
+        link_to 'Due Today',
+          category_line_item_dates_path(@category),
+          class: 'btn btn--primary btn--ml'
+      %>
+    </div>
   </div>
 
   <%= turbo_frame_tag LineItemDate.new %>
-  
+
   <%= turbo_frame_tag 'line_item_dates' do %>
     <%= render @line_item_dates, category: @category %>
   <% end %>

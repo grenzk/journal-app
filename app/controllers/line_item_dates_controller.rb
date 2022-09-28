@@ -2,6 +2,18 @@ class LineItemDatesController < ApplicationController
   before_action :set_category
   before_action :set_line_item_date, only: %i[edit update destroy]
 
+  def index
+    @line_item_date =
+      @category.line_item_dates.find_by_sql(
+        'select lid.date, li.name, li.description
+        from line_item_dates lid
+        left join line_items li on lid.id = li.line_item_date_id
+        where lid.date = current_date'
+      )
+
+    @current = @line_item_date.first
+  end
+
   def new
     @line_item_date = @category.line_item_dates.build
   end
