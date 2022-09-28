@@ -1,0 +1,15 @@
+.login-container {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+  width: 30rem;
+}
