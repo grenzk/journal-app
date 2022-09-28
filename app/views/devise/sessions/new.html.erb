@@ -7,7 +7,7 @@
     <div class="form-inputs">
       <%=
         f.input :email,
-        required: false,
+        required: true,
         autofocus: true,
         input_html: {
           class: 'login-input',
@@ -17,7 +17,7 @@
       %>
       <%=
         f.input :password,
-        required: false,
+        required: true,
         input_html: {
           class: 'login-input',
           placeholder: 'Password',
