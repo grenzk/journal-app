@@ -1,0 +1,19 @@
+.home-img {
+  position: absolute;
+  width: 52%;
+  right: 1rem;
+  top: 2rem;
+  bottom: 1rem;
+}
+
+.home-title {
+  margin-top: 6rem;
+  margin-bottom: var(--space-s);
+  font-size: var(--font-size-xxxl);
+}
+
+.home-text {
+  width: 58%;
+  font-size: var(--font-size-m);
+  margin-bottom: 2rem;
+}

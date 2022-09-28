@@ -1,5 +1,12 @@
-<main class="container">
-  <h1>Welcome to your Journal!</h1>
+<main class="container ">
+  <h1 class="home-title">Welcome To Journal!</h1>
+  <p class="home-text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget
+    ultricies magna. Integer vitae eros ac nunc dictum bibendum. Suspendisse
+    ullamcorper feugiat hendrerit. Curabitur at ligula fringilla, imperdiet ex
+    vel, vehicula turpis.
+  </p>
+  <%= image_tag 'young-girl.svg', class: 'home-img' %>
 
   <% if user_signed_in? %>
     <%= link_to 'View categories', categories_path, class: 'btn btn--dark' %>
