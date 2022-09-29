@@ -1,4 +1,4 @@
 web: bin/rails server -p 3000
 css: yarn build:css --watch
-redis: redis-server /Users/sean/.asdf/installs/redis/7.0.4/bin/redis.conf
+redis: redis-server
 js: yarn build --watch
