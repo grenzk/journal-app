@@ -10,7 +10,7 @@ A Ruby on Rails application that allows users to create and manage tasks.
 
 - Ruby on Rails
 - PostgreSQL
-- SASS
+- Sass
 
 ## User Login
 
